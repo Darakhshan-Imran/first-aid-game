@@ -1,0 +1,16 @@
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    top: -10px;
+    animation: fall 5s linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh) rotate(720deg);
+    }
+  }
+  
+  
