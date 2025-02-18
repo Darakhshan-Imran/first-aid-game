@@ -8,6 +8,7 @@ import GameCompletionScreen from "./GameCompletionScreen"
 import { Button } from "../components/ui/button"
 import { gameLevels } from "../lib/gameData"
 import WrongSelectionAlert from "../components/WrongSelectionAlert"
+import { DropResult } from "@hello-pangea/dnd"
 
 const Game = () => {
   const [currentLevel, setCurrentLevel] = useState(0)
@@ -16,11 +17,20 @@ const Game = () => {
   const [showLevelBadge, setShowLevelBadge] = useState(false)
   const [showWrongSelectionAlert, setShowWrongSelectionAlert] = useState(false)
 
+
+
+  interface Result extends DropResult {
+    destination: {
+      droppableId: string
+      index: number
+    } | null
+  }
+
   useEffect(() => {
     setCompletedLevels(new Array(gameLevels.length).fill(false))
   }, [])
 
-  const onDragEnd = (result: any) => {
+  const onDragEnd = (result: Result) => {
     if (!result.destination || result.destination.droppableId !== "subject") return
 
     const correctAnswer = gameLevels[currentLevel].correctAnswer

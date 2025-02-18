@@ -7,7 +7,7 @@ const WrongSelectionAlert: React.FC = () => {
       <div className="bg-white p-6 rounded-lg text-center">
         <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
         <h2 className="text-xl font-bold mb-2">Oops!</h2>
-        <p>That's not the correct choice. Try again!</p>
+        <p>That&apos;s not the correct choice. Try again!</p>
       </div>
     </div>
   )

@@ -14,7 +14,7 @@ const GameCompletionScreen: React.FC<GameCompletionScreenProps> = ({ resetGame }
       <div className="bg-white p-8 rounded-lg inline-block">
         <Trophy className="w-24 h-24 text-yellow-400 mx-auto mb-4" />
         <h2 className="text-3xl font-bold mb-4">Congratulations!</h2>
-        <p className="text-xl mb-4">You've completed all levels and mastered child first aid!</p>
+        <p className="text-xl mb-4">You&apos;ve completed all levels and mastered child first aid!</p>
         <Button onClick={resetGame} className="bg-orange-400 font-sans text-xl">Play Again</Button>
       </div>
     </div>
